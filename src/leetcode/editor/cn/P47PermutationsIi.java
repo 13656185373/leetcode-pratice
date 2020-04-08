@@ -45,14 +45,19 @@ class Solution {
                 result.add(new ArrayList<>(tmp));
                 return;
             }
-            for (int i = 0; i < size; i++) {
-                if (i>0 && nums[i] == nums[i-1] && !used[i]){
-                    tmp.push(nums[i]);
-                    used[i] = true;
-                    backtrak(nums, i+1,tmp,used);
-                    tmp.pop();
-                    used[i] = false;
+            for (int i = 0; i < size; ++i) {
+                if (used[i]){
+                    continue;
                 }
+                if (i>0 && nums[i] == nums[i-1] && !used[i]){
+                    continue;
+                }
+
+                tmp.push(nums[i]);
+                used[i] = true;
+                backtrak(nums, i+1,tmp,used);
+                tmp.pop();
+                used[i] = false;
             }
         }
 }
