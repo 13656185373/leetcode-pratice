@@ -69,24 +69,6 @@ public class P160IntersectionOfTwoLinkedLists{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode(int val) {
-            this(val,null);
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(val);
-        }
-    }
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         HashSet<ListNode> set = new HashSet<>();

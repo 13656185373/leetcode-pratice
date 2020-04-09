@@ -27,32 +27,6 @@ public class P82RemoveDuplicatesFromSortedListIi{
     
 
 //leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    public ListNode(int val) {
-        this(val,null);
-    }
-
-    @Override
-    public String toString() {
-        return String.valueOf(val);
-    }
-}
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(0);

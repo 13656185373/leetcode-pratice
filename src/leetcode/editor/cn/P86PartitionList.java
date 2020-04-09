@@ -22,25 +22,6 @@ public class P86PartitionList{
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode(int val) {
-            this(val,null);
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(val);
-        }
-    }
-
 class Solution {
     public ListNode partition(ListNode head, int x) {
         ListNode before = new ListNode(0);

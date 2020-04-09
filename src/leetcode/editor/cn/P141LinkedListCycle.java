@@ -51,24 +51,6 @@ public class P141LinkedListCycle{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode(int val) {
-            this(val,null);
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(val);
-        }
-    }
 
 public class Solution {
     public boolean hasCycle(ListNode head) {

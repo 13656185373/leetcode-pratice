@@ -14,25 +14,6 @@ package leetcode.editor.cn;
 //Java：反转链表
 public class P206ReverseLinkedList{
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public ListNode(int val) {
-            this(val,null);
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(val);
-        }
-    }
-
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;

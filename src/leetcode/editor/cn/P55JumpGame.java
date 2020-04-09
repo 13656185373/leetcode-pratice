@@ -25,32 +25,21 @@ package leetcode.editor.cn;
 public class P55JumpGame{
     public static void main(String[] args) {
         Solution solution = new P55JumpGame().new Solution();
-        int[] nums = {2,0,0};
+        int[] nums = {2,5,0,0};
         System.out.println(solution.canJump(nums));
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    boolean result = false;
     public boolean canJump(int[] nums) {
-        if (nums.length == 1){
-            return true;
-        }
-        canJump(0,nums);
-        return result;
-    }
-
-    private void canJump(int i, int[] nums) {
-        if (i == nums.length - 1){
-            result = true;
-            return;
-        }
-        if (i <nums.length && nums[i]>0){
-            for (int j = 1; j <= nums[i] ; j++) {
-                canJump(i+j,nums);
+        int len = nums.length - 1;
+        for (int i = 0; i < 0; i++) {
+            if (nums[i] + i >= len){
+                return true;
             }
         }
-        }
+        return false;
+    }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

@@ -31,8 +31,8 @@ import java.util.*;
 public class P102BinaryTreeLevelOrderTraversal{
     public static void main(String[] args) {
         Solution solution = new P102BinaryTreeLevelOrderTraversal().new Solution();
-        TreeNode root = new TreeNode(3);
-        root.setLeft(new TreeNode(9)).setRight(new TreeNode(20).setLeft(new TreeNode(15).setRight(new TreeNode(7))));
+        TreeNode root = new TreeNode(1);
+        root.setLeft(new TreeNode(2)).setRight(new TreeNode(3).setLeft(new TreeNode(4)).setRight(new TreeNode(5)));
         System.out.println(solution.levelOrder(root));
         // TO TEST
     }
@@ -45,21 +45,23 @@ class Solution {
         if (root == null){
             return result;
         }
-        ArrayDeque<TreeNode> queue = new ArrayDeque<>();
-        queue.push(root);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
 
         while (queue.size() > 0){
             List<Integer> tmp = new ArrayList<>();
-            for (int i = 0; i < queue.size(); i++) {
-                TreeNode node = queue.pop();
+            int tmpLen = queue.size();
+            for (int i = 0; i < tmpLen; i++) {
+                TreeNode node = queue.poll();
                 tmp.add(node.val);
 
                 if (node.left != null){
-                    queue.push(node.left);
+                    queue.add(node.left);
                 }
                 if (node.right != null){
-                    queue.push(node.right);
+                    queue.add(node.right);
                 }
+
             }
             result.add(tmp);
         }
