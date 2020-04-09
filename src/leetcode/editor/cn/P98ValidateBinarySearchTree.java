@@ -40,13 +40,6 @@ public class P98ValidateBinarySearchTree{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
 class Solution {
     public boolean isValidBST(TreeNode root) {
         return isValid(root,Integer.MIN_VALUE,Integer.MAX_VALUE);

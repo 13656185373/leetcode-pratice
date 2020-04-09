@@ -1,33 +1,34 @@
-//给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 
+//给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字）。 
 //
-// 示例: 
-//
-// 输入: [-2,1,-3,4,-1,2,1,-5,4],
-//输出: 6
-//解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
 // 
 //
-// 进阶: 
+// 示例 1: 
 //
-// 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。 
-// Related Topics 数组 分治算法 动态规划
+// 输入: [2,3,-2,4]
+//输出: 6
+//解释: 子数组 [2,3] 有最大乘积 6。
+// 
+//
+// 示例 2: 
+//
+// 输入: [-2,0,-1]
+//输出: 0
+//解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。 
+// Related Topics 数组 动态规划
 
 
 package leetcode.editor.cn;
-
-import java.util.Arrays;
-
-//Java：最大子序和
-public class P53MaximumSubarray{
+//Java：乘积最大子数组
+public class P152MaximumProductSubarray{
     public static void main(String[] args) {
-        Solution solution = new P53MaximumSubarray().new Solution();
-        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-        solution.maxSubArray(nums);
+        Solution solution = new P152MaximumProductSubarray().new Solution();
+        int[] nums = {-4,-3};
+        System.out.println(solution.maxProduct(nums));
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public int maxSubArray(int[] nums) {
+    public int maxProduct(int[] nums) {
         if (nums == null || nums.length<1){
             return 0;
         }
@@ -40,7 +41,7 @@ class Solution {
 
         //状态转移 dp[i] = max[dp[i-1],0] + nums[i]
         for (int i = 1; i < nums.length; i++) {
-            dp[i] = Math.max(dp[i-1],0) + nums[i];
+            dp[i] = Math.max(dp[i-1],0) * nums[i];
             ans = Math.max(ans,dp[i]);
         }
         return ans;

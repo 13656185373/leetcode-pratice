@@ -31,17 +31,14 @@ import java.util.*;
 public class P102BinaryTreeLevelOrderTraversal{
     public static void main(String[] args) {
         Solution solution = new P102BinaryTreeLevelOrderTraversal().new Solution();
+        TreeNode root = new TreeNode(3);
+        root.setLeft(new TreeNode(9)).setRight(new TreeNode(20).setLeft(new TreeNode(15).setRight(new TreeNode(7))));
+        System.out.println(solution.levelOrder(root));
         // TO TEST
     }
     
 
 //leetcode submit region begin(Prohibit modification and deletion)
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();

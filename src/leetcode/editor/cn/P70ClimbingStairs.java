@@ -33,27 +33,23 @@ import java.util.HashSet;
 public class P70ClimbingStairs{
     public static void main(String[] args) {
         Solution solution = new P70ClimbingStairs().new Solution();
-        System.out.println(solution.climbStairs(4));
+        System.out.println(solution.climbStairs(1));
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    HashMap<String,Integer> map = new HashMap<>();
 
     public int climbStairs(int n) {
-        return count(n);
-    }
-
-    private int count(int i) {
-     if (i == 1 || i == 2){
-         return i;
-     }
-     if (map.get(i+"")!=null){
-         return map.get(i+"");
-     }
-     int tmp = count(i-1)+count(i-2);
-        map.put(i+"",tmp);
-     return tmp;
+        if (n == 1){
+            return 1;
+        }
+        int[] dp = new int[n+1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n ; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
     }
     }
 //leetcode submit region end(Prohibit modification and deletion)

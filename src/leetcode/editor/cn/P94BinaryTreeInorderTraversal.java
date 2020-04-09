@@ -27,12 +27,6 @@ public class P94BinaryTreeInorderTraversal{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
 class Solution {
     List<Integer> result = new ArrayList<>();
     public List<Integer> preorderTraversal(TreeNode root) {

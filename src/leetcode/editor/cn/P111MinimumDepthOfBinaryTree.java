@@ -26,12 +26,6 @@ public class P111MinimumDepthOfBinaryTree{
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
 
 class Solution {
     public int minDepth(TreeNode root) {
