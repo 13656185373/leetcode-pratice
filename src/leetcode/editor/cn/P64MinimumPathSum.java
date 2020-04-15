@@ -59,15 +59,6 @@ class Solution {
             return sum[row-1][col-1];
         }
 
-    private void print(int[][] sum){
-        for (int i = 0; i < sum.length; i++) {
-            for (int j = 0; j < sum[0].length; j++) {
-                System.out.print(sum[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println("——————————————");
-    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

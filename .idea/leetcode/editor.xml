@@ -83,11 +83,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题25HeBingLiangGePaiXuDeLianBiaoLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题25HeBingLiangGePaiXuDeLianBiaoLcof.java" />
+              <option name="questionId" value="100286" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题29ShunShiZhenDaYinJuZhenLcof.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题29ShunShiZhenDaYinJuZhenLcof.java" />
               <option name="questionId" value="100293" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题42LianXuZiShuZuDeZuiDaHeLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/P面试题42LianXuZiShuZuDeZuiDaHeLcof.java" />
+              <option name="questionId" value="100304" />
             </LeetcodeEditor>
           </value>
         </entry>

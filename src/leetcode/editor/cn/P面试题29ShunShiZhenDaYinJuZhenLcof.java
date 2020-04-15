@@ -39,7 +39,7 @@ public class P面试题29ShunShiZhenDaYinJuZhenLcof{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] spiralOrder(int[][] matrix) {
-
+        return null;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
