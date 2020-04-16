@@ -31,7 +31,7 @@ public class P面试题42LianXuZiShuZuDeZuiDaHeLcof{
     public static void main(String[] args) {
         Solution solution = new P面试题42LianXuZiShuZuDeZuiDaHeLcof().new Solution();
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-        solution.maxSubArray(nums);
+        System.out.println(solution.maxSubArray(nums));
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -44,22 +44,17 @@ class Solution {
         if (nums.length == 1){
             return nums[0];
         }
-        int max = nums[length-1];
-        int[] dp = new int[length];
+        int max = nums[0];
 
-        for (int i = 0; i < length; i++) {
-            dp[i] = nums[i];
-            for (int j = i + 1; j < length; j++) {
-                int column = nums[j];
-                int last = dp[j-1];
-                if (last < 0 ){
-                    dp[j] = nums[j];
-                }else {
-                    dp[j] = last + column;
-                }
-                max = Math.max(max,dp[j]);
+        for (int i = 1; i < length; i++) {
+            int column = nums[i];
+            int last = nums[i-1];
+            if (last <= 0 ){
+                nums[i] = column;
+            }else {
+                nums[i] = last + column;
             }
-            ArrayUtil.printSingle(dp);
+            max = Math.max(max,nums[i]);
         }
         return max;
     }

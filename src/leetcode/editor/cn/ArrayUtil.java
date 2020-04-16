@@ -19,8 +19,9 @@ public class ArrayUtil {
 
     public static void printSingle(int[] dp){
         for (int i = 0; i < dp.length; i++) {
-            System.out.print(dp[i]);
+            System.out.print(dp[i]+" ");
         }
+        System.out.println();
         System.out.println("——————————————");
     }
 }
