@@ -1,5 +1,7 @@
 package leetcode.editor.cn;
 
+import java.util.List;
+
 /**
  * @program: leetcode-pratice
  * @description:
@@ -23,5 +25,19 @@ public class ArrayUtil {
         }
         System.out.println();
         System.out.println("——————————————");
+    }
+
+    public static void swap(int[] nums,int left,int right){
+        int temp = nums[right];
+        nums[right] = nums[left];
+        nums[left] = temp;
+    }
+
+    public static int[] convert(List<Integer> result){
+        int[] arr = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            arr[i] = result.get(i);
+        }
+        return arr;
     }
 }
