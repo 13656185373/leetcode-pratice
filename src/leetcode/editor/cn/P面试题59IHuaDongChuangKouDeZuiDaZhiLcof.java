@@ -51,7 +51,7 @@ class Solution {
             begin++;
             end++;
         }
-        return ArrayUtil.convert(result);
+        return ArrayUtil.convertInt(result);
     }
 
     public int getMin(int[] nums,int begin,int end){

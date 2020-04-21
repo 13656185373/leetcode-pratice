@@ -33,8 +33,16 @@ public class ArrayUtil {
         nums[left] = temp;
     }
 
-    public static int[] convert(List<Integer> result){
+    public static int[] convertInt(List<Integer> result){
         int[] arr = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            arr[i] = result.get(i);
+        }
+        return arr;
+    }
+
+    public static String[] convertStr(List<String> result){
+        String[] arr = new String[result.size()];
         for (int i = 0; i < result.size(); i++) {
             arr[i] = result.get(i);
         }

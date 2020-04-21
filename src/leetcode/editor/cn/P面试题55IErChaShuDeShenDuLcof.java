@@ -26,16 +26,34 @@
 
 
 package leetcode.editor.cn;
+
+
 //Java：二叉树的深度
 public class P面试题55IErChaShuDeShenDuLcof{
     public static void main(String[] args) {
         Solution solution = new P面试题55IErChaShuDeShenDuLcof().new Solution();
+        TreeNode root = new TreeNode(3).setLeft(new TreeNode(9)).setRight(new TreeNode(20).setLeft(new TreeNode(15).setRight(new TreeNode(7))));
+        System.out.println(solution.maxDepth(root));
         // TO TEST
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+    int max = Integer.MIN_VALUE;
     public int maxDepth(TreeNode root) {
+        if (root == null){
+            return 0;
+        }
+        return depth(root,0);
+    }
 
+    private int depth(TreeNode node, int depth) {
+        if (node == null){
+            max = Math.max(max,depth);
+            return depth-1;
+        }
+        int left = depth(node.left,depth + 1);
+        int right = depth(node.right,depth + 1);
+        return Math.max(left,right);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
